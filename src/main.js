@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {render} from 'react-dom'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
@@ -8,8 +8,9 @@ import Vendor from './pages/vendor/vendor'
 const routerPath = LG_CONFIG_ROUTERPATH
 const getRouter = () => (
     <Router>
-        <li><Link to="/a/b/home">home</Link></li>
-        <li><Link to="/a/b/vendor">vendor</Link></li>
+        <Link to={routerPath + "/home"}>home</Link>
+        &nbsp;
+        <Link to={routerPath + "/vendor"}>vendor</Link>
         <Switch>
             <Route exact path={routerPath + "/home"} component={Home}/>
             <Route path={routerPath + "/vendor"} component={Vendor}/>

@@ -9,20 +9,27 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:vue/recommended"
+        "plugin:react/recommended"
     ],
-    // "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
     "plugins": [
-        "vue"
+        "react"
     ],
-    "parser": "vue-eslint-parser",
+    // "parser": "vue-eslint-parser",
     "parserOptions": {
         "parser": "babel-eslint",
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings":{
+        "react": {
+            "version": "detect"
+        }
     },
     "rules": {
         "for-direction": ["error"],
@@ -42,6 +49,9 @@ module.exports = {
         "no-unused-vars": ["error"],
         "no-use-before-define": ["error"],
         // because of categorical variables 'LG_CONFIG_XXX'
-        "no-undef": ["off"]
+        "no-undef": ["off"],
+        "react/jsx-uses-react": ["error"],
+        "react/jsx-uses-vars": ["error"],
+        "react/no-deprecated": 0,
     }
 }

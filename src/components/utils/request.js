@@ -11,9 +11,6 @@ export default (url, type = 'GET', data) => {
             xhrFields: {
                 withCredentials: true
               },
-            beforeSend() {
-
-            },
             success(data) {
                 resolve(data)
             }
