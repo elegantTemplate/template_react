@@ -3,8 +3,8 @@ import { test } from '../../components/utils/api'
 
 export default class Home extends Component {
     componentWillMount(){
-        test().then((result) => {
-            console.log(result)
+        test().then((res) => {
+            console.log(res)
         });
     }
     

@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from './pages/home/home'
 import Vendor from './pages/vendor/vendor'
 
-const routerPath = LG_CONFIG_ROUTERPATH
+const routerPath = "LG_CONFIG_ROUTERPATH"
 const getRouter = () => (
     <Router>
         <Link to={routerPath + "/home"}>home</Link>

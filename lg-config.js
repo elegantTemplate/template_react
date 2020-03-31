@@ -14,10 +14,18 @@ module.exports = {
         useMock: true,
         path: '/a/b/',
         // assets path
-        publicPath: '/a/b/'
+        publicPath: '/a/b/',
+        env: {
+            api_prefix: '',
+            routerPath: '/a/b'
+        }
     },
     prod: {
         path: '/a/b/',
-        publicPath: '/a/b/'
+        publicPath: '/a/b/',
+        env: {
+            api_prefix: '//u.jr.jd.com',
+            routerPath: '/a/b'
+        }
     }
 }
